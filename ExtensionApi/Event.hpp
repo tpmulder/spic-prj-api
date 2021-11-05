@@ -130,6 +130,8 @@ namespace spic {
 
 		#include "Event_private.hpp"
 	};
-}
+
+	#include "Event_templates.hpp"
+};
 
 #endif // EVENT_H_

@@ -2,6 +2,7 @@
 #define EVENT_H_
 
 #include "EventHandler.hpp"
+#include <list>
 
 namespace spic {
 	template <typename... Args>

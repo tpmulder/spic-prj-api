@@ -11,10 +11,22 @@ namespace spic {
      * @spicapi
      */
     class Camera : public GameObject {
+        public:
+            Color BackgroundColor();
+            void BackgroundColor(Color col);
+
+            double AspectWidth();
+            void AspectWidth(double w);
+
+            double AspectHeight();
+            void AspectHeight(double h);
+
         private:
-            Color backgroundColor;
-            double aspectWidth;
-            double aspectHeight;
+            // Color backgroundColor;
+            // double aspectWidth;
+            // double aspectHeight;
+
+            #include "Camera_private.hpp"
     };
 
 }

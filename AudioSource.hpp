@@ -24,26 +24,40 @@ namespace spic {
              */
             void Stop();
 
+            std::string AudioClip();
+            void AudioClip(std::string clip);
+
+            double Volume();
+            void Volume(double vol);
+
+            bool Loop();
+            void Loop(bool l);
+
+            bool PlayOnAwake();
+            void PlayOnAwake(bool poa);
+
         private:
             /**
              * @brief Path to a locally stored audio file.
              */
-            std::string audioClip;
+            // std::string audioClip;
 
             /**
              * @brief When true, the component will start playing automatically.
              */
-            bool playOnAwake;
+            // bool playOnAwake;
 
             /**
              * @brief When true, the audio will play indefinitely.
              */
-            bool loop;
+            // bool loop;
 
             /**
              * @brief Audio volume, between 0.0 and 1.0.
              */
-            double volume;
+            // double volume;
+
+            #include "AudioSource_private"
     };
 
 }

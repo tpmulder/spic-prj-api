@@ -13,19 +13,21 @@ namespace spic {
              * @return true if active, false otherwise.
              * @spicapi
              */
-            bool Active() const { return active; }
+            bool Active() const; // { return active; }
 
             /**
              * @brief flag New active status.
              * @spicapi
              */
-            void Active(bool flag) { active = flag; }
+            void Active(bool flag); // { active = flag; }
 
         private:
             /**
              * @brief Active status.
              */
-            bool active;
+            // bool active;
+
+            #include "Component_private.hpp"
     };
 
 }

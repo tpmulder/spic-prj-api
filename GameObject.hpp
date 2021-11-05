@@ -43,18 +43,14 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            static std::shared_ptr<GameObject> FindObjectOfType(bool includeInactive = false) {
-                // ... implementation here
-            }
+            static std::shared_ptr<GameObject> FindObjectOfType(bool includeInactive = false);
 
             /**
              * @brief Gets a list of all loaded objects of Type type.
              * @spicapi
              */
             template<class T>
-            static std::vector<std::shared_ptr<GameObject>> FindObjectsOfType(bool includeInactive = false) {
-                // ...implementation here
-            }
+            static std::vector<std::shared_ptr<GameObject>> FindObjectsOfType(bool includeInactive = false);
 
             /**
              * @brief Removes a GameObject from the administration.
@@ -116,9 +112,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            void AddComponent(std::shared_ptr<Component> component) {
-                // ... implementation here
-            }
+            void AddComponent(std::shared_ptr<Component> component);
 
             /**
              * @brief Get the first component of the specified type. Must be
@@ -127,9 +121,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::shared_ptr<Component> GetComponent() const {
-                // ... implementation here
-            }
+            std::shared_ptr<Component> GetComponent() const;
 
             /**
              * @brief Get the first component of the specified type from
@@ -139,9 +131,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::shared_ptr<Component> GetComponentInChildren() const {
-                // ... implementation here
-            }
+            std::shared_ptr<Component> GetComponentInChildren() const;
 
             /**
              * @brief Get the first component of the specified type from
@@ -151,9 +141,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::shared_ptr<Component> GetComponentInParent() const {
-                // ... implementation here
-            }
+            std::shared_ptr<Component> GetComponentInParent() const;
 
             /**
              * @brief Get all components of the specified type. Must be
@@ -162,9 +150,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::vector<std::shared_ptr<Component>> GetComponents() const {
-                // ... implementation here
-            }
+            std::vector<std::shared_ptr<Component>> GetComponents() const;
 
             /**
              * @brief Get all components of the specified type from
@@ -174,9 +160,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::vector<std::shared_ptr<Component>> GetComponentsInChildren() const {
-                // ... implementation here
-            }
+            std::vector<std::shared_ptr<Component>> GetComponentsInChildren() const;
 
             /**
              * @brief Get all components op the specified type from
@@ -186,9 +170,7 @@ namespace spic {
              * @spicapi
              */
             template<class T>
-            std::vector<std::shared_ptr<Component>> GetComponentsInParent() const {
-                // ... implementation here
-            }
+            std::vector<std::shared_ptr<Component>> GetComponentsInParent() const;
 
             /**
              * @brief Activates/Deactivates the GameObject, depending on the given true or false value.
@@ -204,6 +186,14 @@ namespace spic {
              */
             bool Active() const;
 
+            void Name(std::string n);
+            std::string Name() const;
+
+            void Tag(std::string t);
+            std::string Tag() const;
+
+
+
             /**
              * @brief Returns whether this game component is active, taking its parents
              *        into consideration as well.
@@ -214,12 +204,16 @@ namespace spic {
             bool IsActiveInWorld() const;
 
         private:
-            std::string name;
-            std::string tag;
-            bool active;
-            int layer;
+            // std::string name;
+            // std::string tag;
+            // bool active;
+            // int layer;
             // ... more members
+
+            #include "GameObject_private.hpp"
     };
+
+    #include "GameObject_templates.hpp"
 
 }
 

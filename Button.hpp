@@ -24,18 +24,23 @@ namespace spic {
              *        any kind of callable.
              * @spicapi
              */
-            void OnClick(std::function<void()> callback) { onClick = callback; }
+            void OnClick(std::function<void()> callback); // { onClick = callback; }
+
+            bool Interactable();
+            void Interactible(bool interact);
 
         private:
             /**
              * @brief When false, the button will not react to clicks.
              */
-            bool interactable;
+            // bool interactable;
 
             /**
              * @brief The registered click handler.
              */
-            std::function<void()> onClick;
+            // std::function<void()> onClick;
+
+            #include "Button_private.hpp"
     };
 
 }

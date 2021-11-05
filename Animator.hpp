@@ -25,13 +25,18 @@ namespace spic {
              */
             void Stop();
 
+            void Fps(int newFps);
+            int Fps();
+
         private:
             /**
              * @brief frames per second (playing speed)
              * @spicapi
              */
-            int fps;
+            // int fps;
             // ... collection of Sprites here
+
+        #include "Animator_private.h"
     };
 
 }

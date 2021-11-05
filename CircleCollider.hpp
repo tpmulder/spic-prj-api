@@ -15,17 +15,19 @@ namespace spic {
              * @return The radius
              * @spicapi
              */
-            double Radius() const { return radius; }
+            double Radius() const; // { return radius; }
 
             /**
              * @brief Set the collider's radius
              * @param newRadius The desired radius
              * @spicapi
              */
-            void Radius(double newRadius) { radius = newRadius; }
+            void Radius(double newRadius); // { radius = newRadius; }
 
         private:
-            double radius;
+            // double radius;
+
+            #include "CircleCollider_private.hpp"
     };
 
 }

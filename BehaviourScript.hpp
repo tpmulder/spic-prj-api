@@ -3,11 +3,16 @@
 
 #include "Component.hpp"
 #include "Collider.hpp"
+#include "GameObject.hpp"
 
 namespace spic {
 
     class BehaviourScript : public Component {
         public:
+            BehaviourScript(GameObject& go);
+
+            GameObject& GameObject();
+
             /**
              * @brief TODO
              * @spicapi
@@ -40,6 +45,9 @@ namespace spic {
              * @spicapi
              */
             virtual void OnTriggerStay2D(const Collider& collider);
+
+        private:
+            #include "BehaviourScript_private.hpp"
     };
 
 }

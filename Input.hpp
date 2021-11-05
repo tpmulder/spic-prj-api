@@ -312,6 +312,24 @@ namespace spic {
         bool GetKeyUp(KeyCode key);
 
         /**
+         * @brief Returns true while the user holds down the key identified by the action name.
+         * @spicapi
+         */
+        bool GetKey(const std::string& action);
+
+        /**
+         * @brief Returns true during the frame the user starts pressing down the key identified by the action name.
+         * @spicapi
+         */
+        bool GetKeyDown(const std::string& action);
+
+        /**
+         * @brief Returns true during the frame the user releases the key identified by the action name.
+         * @spicapi
+         */
+        bool GetKeyUp(const std::string& action);
+
+        /**
          * @brief Returns whether the given mouse button is held down.
          * @spicapi
          */
@@ -329,6 +347,8 @@ namespace spic {
          */
         bool GetMouseButtonUp(MouseButton which);
 
+        void SetBind(const std::string& name);
+        void RemoveBind(const std::string& name);
     }
 
 }

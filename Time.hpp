@@ -31,6 +31,7 @@ namespace spic {
         private:
             static double deltaTime;
             static double timeScale;
+            #include "Time_private.hpp"
     };
 
 }

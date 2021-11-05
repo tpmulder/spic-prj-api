@@ -10,9 +10,9 @@ namespace spic {
      * @brief Enumeration for different rigid body types
      */
     enum class BodyType {
-        staticBody,
-        kinematicBody,
-        dynamicBody
+        STATIC_BODY,
+        KINEMATIC_BODY,
+        DYNAMIC_BODY
     };
 
     /**
@@ -28,10 +28,26 @@ namespace spic {
              */
             void AddForce(const Point& forceDirection);
 
+            double Mass() const;
+            void Mass(double newMass);
+
+            double GravityScale() const;
+            void GravityScale(double newMass);
+
+            BodyType BodyType() const;
+            void BodyType(BodyType newBodyType);
+
+            Point Velocity() const;
+            void Velocity(const& Point velocity);
+
+            bool FixedRotation() const;
+            void FixedRotation(bool fixed);
+
         private:
-            double mass;
-            double gravityScale;
-            BodyType bodyType;
+            #include "RigidBody_private.hpp"
+            //double mass;
+            //double gravityScale;
+            //BodyType bodyType;
     };
 
 }

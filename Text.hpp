@@ -12,9 +12,9 @@ namespace spic {
      * @spicapi
      */
     enum class Alignment {
-        left,
-        center,
-        right
+        LEFT,
+        CENTER,
+        RIGHT
     };
 
     /**
@@ -22,12 +22,28 @@ namespace spic {
      * @spicapi
      */
     class Text : public UIObject {
+        public:
+            void Text(const std::string& newText);
+            std::string Text() const;
+
+            void Font(const std::string& newFont);
+            std::string Font() const;
+
+            void Size(int newSize);
+            int Size() const;
+
+            void Alignment(Alignment newAlignment);
+            Alignment Alignment() const;
+
+            void Color(Color newColor);
+            Color Color() const;
         private:
-            std::string text;
-            std::string font;
-            int size;
-            Alignment alignment;
-            Color color;
+        #include "Text_private.hpp"
+            //std::string text;
+            //std::string font;
+            //int size;
+            //Alignment alignment;
+            //Color color;
     };
 
 }

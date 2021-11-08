@@ -18,8 +18,13 @@ namespace spic {
             void AddGameObject(std::shared_ptr<GameObject> gameObject);
             void AddGameObjects(std::vector<std::shared_ptr<GameObject>> gameObjects);
             void RemoveGameObject(std::shared_ptr<GameObject> gameObject);
-            void GetGameObjectByComponent(const std::string&) const;
-            void GetGameObjectByComponent(std::shared_ptr<Component>) const;
+
+            template<typename T>
+            std::shared_ptr<GameObject> GetGameObjectByComponent() const;
+
+            template<typename T>
+            std::vector<std::shared_ptr<GameObject>> GetGameObjectsByComponent() const;
+
             std::vector<std::shared_ptr<GameObject>>& GetGameObjects() const;
 
         private:
@@ -30,6 +35,7 @@ namespace spic {
             std::vector<std::shared_ptr<GameObject>> contents;
     };
 
+    #include "GameObject_template"
 }
 
 #endif // SCENE_H_

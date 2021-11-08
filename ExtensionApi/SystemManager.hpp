@@ -8,6 +8,7 @@ namespace spic {
 
     class SystemManager {
         public:
+            void Update();
             void AddSystem(std::shared_ptr<ISystem> system);
             void RemoveSystem(std::shared_ptr<ISystem> system);
 
